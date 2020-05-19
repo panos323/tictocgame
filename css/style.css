@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    height:100%;
+}
+
+body{
+    width:100%;
+    background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+ .wrapper{
+    margin:0 auto;
+    width:90%;
+} 
+
+.flexContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.boardOutline {
+    background:rgb(182, 143, 71);
+    padding:30px 40px;
+    border-radius:15px;
+    -webkit-box-shadow: 4px 4px 14px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 14px 2px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 14px 2px rgba(0,0,0,0.75);
+}
+
+.gameContainer{
+    width:300px;
+    height:400px;
+    background: rgb(132, 184, 95);
+    background: linear-gradient(90deg, rgb(132, 184, 95) 1%, rgb(17, 41, 1) 50%, rgba(165,205,82,1) 100%, rgb(19, 109, 49) 100%);
+    color:white;
+}
+
+.gameContainer h1{
+    padding:25px 40px;
+}
+
+.chooseXO {
+    display:flex;
+    justify-content: center;
+    margin-top:50px;
+}
+
+.chooseXO p{
+    font-size:34px;
+    margin:0 5%;
+    transition:color 0.2s ease-in-out;
+    cursor:pointer;
+}
+
+.chooseXO p:hover{
+    color:red;
+}
+
+.d-none{
+    display:none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.secondGameStage {
+    height:100%;
+}
+
+.bordersList{
+    display:flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    height: 100%;
+}
+
+.bordersList li {
+    display: flex;
+    flex:1 0 30%;
+    border:1px solid white;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
+    min-height:130px;
+}
+
+.scores {
+    display:flex;
+    justify-content: space-between;
+}
+
+.scores h3{
+    margin-bottom:1px;
+}
+
+#playerComputerTurn {
+    display:flex;
+    justify-content:space-around;
+    width:470px;
+}
+
+.ticTacTitle {
+    align-self: flex-end;
+    animation: ticTacTitle 1s infinite;
+}
+
+#showPlayerTurn{
+    padding:8px 4px;
+    background: rgb(132, 184, 95);
+    border-radius:18px;
+    color:white;
+    min-width:160px;
+    text-align: center;
+    animation: shadowPulse 1s infinite ease-in-out;
+}
+
+#showGuestTurn{
+    padding:8px 4px;
+    background: rgb(132, 184, 95);
+    border-radius:18px;
+    color:white;
+    min-width:160px;
+    text-align: center;
+    animation: shadowPulse 1s infinite ease-in-out;
+}
+
+#resetGame {
+    color:white;
+    margin-top:2px;
+    cursor:pointer;
+    opacity:0.7;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#resetGame:hover{
+    opacity:1;
+}
+
+@keyframes ticTacTitle {
+    0% {
+        color:gold;
+    }
+    25% {
+        color:orange;
+    }
+    75% {
+        color:orange;
+    }
+    100% {
+        color:gold;
+    }
+  }
+
+  @keyframes shadowPulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(247, 247, 247, 0.349);
+    }
+    100% {
+        box-shadow: 0 0 0 6px rgba(247, 247, 247, 0.349);
+    }
+}
